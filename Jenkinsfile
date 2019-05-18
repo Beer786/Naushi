@@ -7,8 +7,12 @@ pipeline {
             }
         }
         stage('Test') { 
+            wrappers {
+            buildUserVars()
+            }
             steps {
                 sh 'echo mohamed'
+                sh 'echo $BUILD_USER'
             }
         }
         stage('Deploy') { 

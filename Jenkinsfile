@@ -15,7 +15,10 @@ pipeline {
                    sh 'echo ${BUILD_USER}'
                 }
                 sh 'echo mohamed'
-                sh 'echo $BUILD_USER'
+                sh 'echo User Name: ${BUILD_USER}'
+                sh 'echo First Name: ${BUILD_USER_FIRST_NAME}'
+                sh 'echo "User mail: ${BUILD_USER_EMAIL}'
+                
             }
         }
         stage('Deploy') { 
